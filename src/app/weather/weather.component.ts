@@ -14,6 +14,7 @@ export class WeatherComponent {
   pressure: number=0;
   summery: string = "";
   iconURL: string = "";
+  city: string = "bhubaneswar";
   constructor(private weatherService: WeatherService){}
 
   ngOnInit() {
@@ -28,6 +29,7 @@ export class WeatherComponent {
         this.humidity = this.myWeather.main.humidity;
         this.pressure = this.myWeather.main.pressure;
         this.summery = this.myWeather.weather[0].main;
+
 
         this.iconURL = "https://openweathermap.org/img/wn/" + this.myWeather.weather[0].icon +"@2x.png";
       },
